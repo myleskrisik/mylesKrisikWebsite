@@ -447,24 +447,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 3rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-0 {
   margin-top: 0px;
 }
 
-.mt-8 {
-  margin-top: 2rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .inline-block {
@@ -505,16 +493,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: flex-end;
 }
 
-.border-t-4 {
-  border-top-width: 4px;
+.border-t-8 {
+  border-top-width: 8px;
 }
 
 .border-b-4 {
   border-bottom-width: 4px;
-}
-
-.border-t-8 {
-  border-top-width: 8px;
 }
 
 .border-transparent {
