@@ -424,22 +424,29 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 *, ::before, ::after {
+  --tw-scroll-snap-strictness: proximity;
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .m-0 {
   margin: 0px;
-}
-
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
 }
 
 .mx-12 {
@@ -447,20 +454,59 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 3rem;
 }
 
-.mt-0 {
-  margin-top: 0px;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.-mr-40 {
+  margin-right: -10rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .inline-block {
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .h-20 {
@@ -473,12 +519,79 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: fit-content;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }
 
-.grow {
-  flex-grow: 1;
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-unfade {
+  -webkit-animation: fadeout 3s;
+          animation: fadeout 3s;
+}
+
+.snap-y {
+  -ms-scroll-snap-type: y var(--tw-scroll-snap-strictness);
+      scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-center {
+  scroll-snap-align: center;
 }
 
 .flex-row {
@@ -489,12 +602,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
-.justify-end {
-  justify-content: flex-end;
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
 
 .border-t-8 {
   border-top-width: 8px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-b-4 {
@@ -505,9 +630,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: transparent;
 }
 
-.border-t-emerald-500 {
+.border-t-accent {
   --tw-border-opacity: 1;
-  border-top-color: rgb(16 185 129 / var(--tw-border-opacity));
+  border-top-color: rgb(0 200 149 / var(--tw-border-opacity));
+}
+
+.border-b-accent {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(0 200 149 / var(--tw-border-opacity));
+}
+
+.bg-body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 74 164 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -531,18 +666,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 4rem;
 }
 
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+.pt-20 {
+  padding-top: 5rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.font-lato {
+  font-family: Lato, sans-serif;
 }
 
 .text-3xl {
@@ -555,21 +684,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
-.text-gray-500 {
+.text-accent3 {
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: rgb(255 250 222 / var(--tw-text-opacity));
 }
 
-.hover\:border-b-emerald-500:hover {
+.text-accent2 {
+  --tw-text-opacity: 1;
+  color: rgb(204 198 255 / var(--tw-text-opacity));
+}
+
+.hover\:border-b-accent:hover {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(16 185 129 / var(--tw-border-opacity));
+  border-bottom-color: rgb(0 200 149 / var(--tw-border-opacity));
 }
 
-.hover\:text-black:hover {
+.hover\:text-accent3-dark:hover {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(255 245 188 / var(--tw-text-opacity));
 }
