@@ -3,9 +3,7 @@
 (function () {
     window.addEventListener("load", init);
     function init() {
-        let nav = document.getElementById('nav');
-
-        let navOffset = nav.offsetTop;
+        let navOffset = document.getElementById('nav').offsetTop;
 
         window.onscroll = () => {
             if (window.pageYOffset >= navOffset) {
@@ -20,5 +18,14 @@
                 nav.classList.add('bottom-0');
             }
         }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     }
 })()
