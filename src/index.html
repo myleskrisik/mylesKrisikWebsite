@@ -1,3 +1,6 @@
+<!--
+  npx tailwindcss -i ./src/style.css -o ./dist/output.css --watch
+-->
 <html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap"
       rel="stylesheet"
     />
-    <script src="/src/script.js"></script>
+    <script type="module" src="/src/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@2/lib/bundle.min.js"></script>
     <script>
       seamless.polyfill();
@@ -29,7 +32,7 @@
       </div>
       <nav
         id="nav"
-        class="w-full m-0 h-20 p-4 flex flex-row absolute bottom-0 bg-body items-center border-b border-b-accent"
+        class="w-full m-0 h-20 p-4 flex flex-row absolute bottom-0 bg-body items-center border-b-2 border-b-accent"
       >
         <ul id="nav-name" class="wx-40 -mr-40">
           <li>
@@ -61,94 +64,20 @@
         </ul>
       </nav>
     </div>
-    <div id="about" class="h-screen pt-20 mx-16 mb-20">
+    <div id="about" class="min-h-screen pt-20 mx-16 mb-20">
       <h2
         class="text-4xl text-accent2 border-b-4 border-b-accent inline-block mb-8"
       >
         About Me
       </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus
-        faucibus leo, quis volutpat lectus. Vestibulum diam magna, tristique vel
-        blandit non, maximus non mauris. Donec efficitur tincidunt nulla, ac
-        aliquam nulla maximus vel. Vivamus consequat diam iaculis elit tempor
-        accumsan. Nunc ligula magna, egestas vitae placerat sed, blandit ut
-        ante. Phasellus sit amet dolor lorem. Integer interdum orci id mauris
-        imperdiet, nec efficitur turpis placerat. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Mauris fringilla urna a nisl scelerisque
-        aliquam. Suspendisse molestie, ante et bibendum auctor, erat tortor
-        ullamcorper sapien, a imperdiet leo dui id magna. Nullam condimentum
-        malesuada enim at scelerisque. Donec et condimentum mi, sed ultricies
-        risus. Nulla sit amet cursus mauris. Sed at justo auctor, sollicitudin
-        ante eu, blandit risus. Suspendisse dignissim tortor at erat vestibulum
-        ornare.
-      </p>
-      <p>
-        Aenean a velit ullamcorper, rutrum augue quis, cursus erat. Praesent
-        lectus urna, vehicula a lectus tempus, ornare venenatis sapien. Duis
-        vitae mauris imperdiet, sagittis metus non, faucibus risus. Vivamus
-        bibendum vulputate eros, gravida hendrerit lectus scelerisque vitae.
-        Morbi maximus neque at arcu finibus, et pretium orci euismod. In eu
-        consequat tortor. Curabitur hendrerit ligula ac leo condimentum, a
-        ultricies nunc porta. Fusce viverra feugiat ligula. Phasellus et leo
-        lectus. Integer vestibulum purus at metus rutrum consequat vitae quis
-        mi. Vestibulum faucibus ac nunc nec blandit. Integer vel ornare magna,
-        ac tempus est. Fusce vitae egestas nisl.
-      </p>
-      <p>
-        Curabitur viverra aliquet mauris, nec sodales lorem volutpat id.
-        Praesent id diam neque. Nulla gravida ipsum ligula, quis pretium sapien
-        ultricies et. Sed vel magna at quam tincidunt gravida nec nec dui. Duis
-        porta rhoncus vehicula. Curabitur cursus at nibh in auctor. Aenean mi
-        diam, mollis quis sodales eget, sollicitudin non purus. Vestibulum nec
-        egestas mi. Phasellus ultricies, elit a dapibus aliquam, tellus dolor
-        eleifend magna, et feugiat neque tellus id enim.
-      </p>
-      <p>
-        Pellentesque habitant morbi tristique senectus et netus et malesuada
-        fames ac turpis egestas. Morbi eget efficitur nulla. Etiam nisi sapien,
-        pretium vel ante nec, tincidunt commodo ligula. In hac habitasse platea
-        dictumst. Nunc pretium non nibh in efficitur. Sed convallis maximus
-        diam, non cursus felis convallis in. Etiam tempus, urna ut laoreet
-        ultrices, ex tellus ultricies orci, vel ultricies est arcu sed sapien.
-        Quisque mollis consectetur mauris a suscipit. Duis volutpat justo quis
-        commodo sagittis. In nec volutpat dolor. Quisque massa leo, laoreet quis
-        augue sed, bibendum sodales nibh. Praesent consequat arcu enim, sed
-        ultricies quam sagittis at. Phasellus lacinia ligula massa, at tincidunt
-        sem sagittis ac. Maecenas finibus ornare volutpat. Vestibulum et nunc
-        massa.
-      </p>
-      <p>
-        Aenean nec sapien eu felis imperdiet malesuada. Curabitur ornare nibh
-        augue. Aliquam elementum eget odio vel ultrices. Quisque cursus, tellus
-        quis facilisis tincidunt, sem est venenatis sapien, a ultricies mi magna
-        sed orci. Pellentesque sit amet enim nec ligula tristique rhoncus.
-        Suspendisse cursus, tellus et euismod varius, neque urna ornare ex, at
-        commodo lectus purus sit amet orci. Suspendisse eget risus enim.
-      </p>
     </div>
-    <div id="resume" class="h-screen pt-20 mx-16 mb-20">
+    <div id="resume" class="min-h-screen pt-20 mx-16 mb-20">
       <h2
         class="text-4xl text-accent2 border-b-4 border-b-accent inline-block mb-8"
       >
         Resume
       </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus
-        faucibus leo, quis volutpat lectus. Vestibulum diam magna, tristique vel
-        blandit non, maximus non mauris. Donec efficitur tincidunt nulla, ac
-        aliquam nulla maximus vel. Vivamus consequat diam iaculis elit tempor
-        accumsan. Nunc ligula magna, egestas vitae placerat sed, blandit ut
-        ante. Phasellus sit amet dolor lorem. Integer interdum orci id mauris
-        imperdiet, nec efficitur turpis placerat. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Mauris fringilla urna a nisl scelerisque
-        aliquam. Suspendisse molestie, ante et bibendum auctor, erat tortor
-        ullamcorper sapien, a imperdiet leo dui id magna. Nullam condimentum
-        malesuada enim at scelerisque. Donec et condimentum mi, sed ultricies
-        risus. Nulla sit amet cursus mauris. Sed at justo auctor, sollicitudin
-        ante eu, blandit risus. Suspendisse dignissim tortor at erat vestibulum
-        ornare.
-      </p>
+      <div id="languages"></div>
     </div>
     <div id="projects" class="min-h-screen pt-20 mx-16 mb-20">
       <h2
@@ -156,8 +85,64 @@
       >
         Projects
       </h2>
-      <div class="grid grid-cols-4 gap-4">
-        <div class="w-1/5 p-4 border-4">
+      <div class="grid grid-cols-3 gap-x-4 w-full min-h-content">
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
+          <h2>header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            rhoncus faucibus leo, quis volutpat lectus. Vestibulum diam magna,
+            tristique vel blandit non, maximus non mauris.
+          </p>
+        </div>
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
+          <h2>header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            rhoncus faucibus leo, quis volutpat lectus. Vestibulum diam magna,
+            tristique vel blandit non, maximus non mauris.
+          </p>
+        </div>
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
+          <h2>header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            rhoncus faucibus leo, quis volutpat lectus. Vestibulum diam magna,
+            tristique vel blandit non, maximus non mauris.
+          </p>
+        </div>
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
+          <h2>header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            rhoncus faucibus leo, quis volutpat lectus. Vestibulum diam magna,
+            tristique vel blandit non, maximus non mauris.
+          </p>
+        </div>
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
+          <h2>header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            rhoncus faucibus leo, quis volutpat lectus. Vestibulum diam magna,
+            tristique vel blandit non, maximus non mauris.
+          </p>
+        </div>
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
+          <h2>header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            rhoncus faucibus leo, quis volutpat lectus. Vestibulum diam magna,
+            tristique vel blandit non, maximus non mauris.
+          </p>
+        </div>
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
+          <h2>header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            rhoncus faucibus leo, quis volutpat lectus. Vestibulum diam magna,
+            tristique vel blandit non, maximus non mauris.
+          </p>
+        </div>
+        <div class="w-13/16 h-80 p-4 border-4 mb-8">
           <h2>header</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc

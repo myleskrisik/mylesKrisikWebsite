@@ -1,0 +1,24 @@
+{
+  "resume": {
+    "languages": {
+      "proficient": ["Java", "HTML/CSS/Javascript", "AWS Services", ""],
+      "familiar": ["f"]
+    },
+    "jobs": [
+      {
+        "title": "Software Engineer Intern",
+        "responsibilites": "ex"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Example Project",
+      "body": "This is a great project"
+    },
+    {
+      "title": "Another Project",
+      "body": "Wow, another project"
+    }
+  ]
+}
