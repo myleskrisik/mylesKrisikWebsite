@@ -75,6 +75,7 @@ function add_smooth_scrolling() {
  */
 function append_json(data) {
   populate_resume_experience(data.experience);
+  populate_projects(data.projects);
 }
 
 /**
@@ -88,7 +89,8 @@ function populate_resume_experience(jobs) {
   let company_h4_class = "text-white text-lg md:text-3xl ml-4 md:ml-2 inline";
   let date_h4_class =
     "text-white text-sm md:text-2xl float-right inline pt-1.5";
-  let ul_class = "ml-16 list-disc list-inside my-4";
+  let ul_class =
+    "mt-2 ml-8 md:ml-12 text-sm text-white md:text-xl list-disc list-inside my-4";
   jobs.forEach((job) => {
     let title_h4 = document.createElement("h4");
     title_h4.textContent = job.title + ":";
@@ -125,8 +127,9 @@ function populate_projects(projects) {
   let projects_cont = document.getElementById("projects-cont");
 
   let project_cont_class = "w-13/16 min-h-80 p-4 border-4 mb-8";
-  let project_title_class = "";
-  let project_body_class = "";
+  let project_title_class = "text-darkAccent3 text-3xl w-full break-words";
+  let project_body_class = "text-white text-lg md:text-xl";
+  let github_link_class = "mt-4 float-right";
   projects.forEach((project) => {
     let project_cont = document.createElement("div");
     project_cont.className = project_cont_class;
@@ -136,5 +139,21 @@ function populate_projects(projects) {
     project_title.className = project_title_class;
 
     let project_body = document.createElement("p");
+    project_body.textContent = project.body;
+    project_body.className = project_body_class;
+
+    let github_link = document.createElement("a");
+    github_link.href = project.githubLink;
+
+    let github_logo = document.createElement("img");
+    github_logo.className = github_link_class;
+    github_logo.src = "./src/img/GitHub-Mark-Light-32px.png";
+    github_logo.alt = "The Github logo";
+    github_link.appendChild(github_logo);
+
+    project_cont.appendChild(project_title);
+    project_cont.appendChild(project_body);
+    projects_cont.appendChild(project_cont);
+    project_cont.appendChild(github_link);
   });
 }
