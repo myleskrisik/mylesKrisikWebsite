@@ -9,7 +9,7 @@ module.exports = {
         accent: "#00C895",
         accent2: "#CCC6FF",
         accent3: "#fffade",
-        "accent3-dark": "#fff5bc",
+        darkAccent3: "#fff5bc",
       },
     },
     fontFamily: {

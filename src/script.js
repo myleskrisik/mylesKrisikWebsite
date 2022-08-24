@@ -1,6 +1,6 @@
 "use strict";
 
-import page_data from "./page_data.json" assert { type: "json" };
+import page_data from "./page_data.js";
 
 (function () {
   window.addEventListener("load", init);
@@ -52,44 +52,52 @@ import page_data from "./page_data.json" assert { type: "json" };
     });
   }
 
+  /**
+   * Appends the data stored within page_data.js to the resume and projects section
+   * @param {JSON} data the JSON data from page_data.js
+   */
   function append_json(data) {
-    console.log(data);
-    populate_resume(data.resume);
+    populate_resume_experience(data.experience);
   }
 
-  function populate_resume(resume_data) {
-    const container = document.getElementById("resume");
+  /**
+   * Populates the jobs section of the resume based on the JSON data passed in jobs
+   * @param {JSON} jobs the data for the resume
+   */
+  function populate_resume_experience(jobs) {
+    let exp_cont = document.getElementById("experience");
+    let title_h4_class = "text-darkAccent3 text-3xl ml-4 inline";
+    let company_h4_class = "text-white text-3xl ml-4 inline";
+    let date_h4_class = "text-white text-3xl right-0 absolute inline mr-12";
+    let ul_class = "ml-12 list-disc list-inside mb-12";
+    jobs.forEach((job) => {
+      let title_h4 = document.createElement("h4");
+      title_h4.textContent = job.title + ":";
+      title_h4.classList = title_h4_class;
 
-    let languages = document.getElementById("languages");
+      let company_h4 = document.createElement("h4");
+      company_h4.textContent = job.company;
+      company_h4.classList = company_h4_class;
 
-    let proficient_header = document.createElement("h3");
-    proficient_header.innerText = "Proficient";
-    let proficient_text = document.createElement("p");
-    proficient_text.innerText = resume_data.languages.proficient.reduce(
-      (previous_language, curr_language) => previous_language + curr_language,
-      ""
-    );
+      let date_h4 = document.createElement("h4");
+      date_h4.textContent = job.date;
+      date_h4.classList = date_h4_class;
 
-    let familiar_header = document.createElement("h3");
-    familiar_header.innerText = "Familiar";
-    let familiar_text = document.createElement("p");
-    familiar_text.innerText = resume_data.languages.familiar.reduce(
-      (previous_language, curr_language) => previous_language + curr_language,
-      ""
-    );
-
-    languages.appendChild(proficient_header);
-    languages.appendChild(proficient_text);
-    languages.appendChild(familiar_header);
-    languages.appendChild(familiar_text);
-
-    resume_data.jobs.forEach((job) => {
-      let h3 = document.createElement("h3");
-      h3.innerText = job.title;
-      let p = document.createElement("p");
-      p.innerText = job.responsibilites;
-      container.appendChild(h3);
-      container.appendChild(p);
+      let ul_cont = document.createElement("ul");
+      ul_cont.classList = ul_class;
+      job.responsibilites.forEach((responsibility) => {
+        let li = document.createElement("li");
+        li.textContent = responsibility;
+        ul_cont.appendChild(li);
+      });
+      exp_cont.appendChild(title_h4);
+      exp_cont.appendChild(company_h4);
+      exp_cont.appendChild(date_h4);
+      exp_cont.appendChild(ul_cont);
     });
+  }
+
+  function populate_projects(project_data) {
+    let project_class = "w-13/16 min-h-80 p-4 border-4 mb-8";
   }
 })();
