@@ -66,10 +66,10 @@ import page_data from "./page_data.js";
    */
   function populate_resume_experience(jobs) {
     let exp_cont = document.getElementById("experience");
-    let title_h4_class = "text-darkAccent3 text-3xl ml-4 inline";
-    let company_h4_class = "text-white text-3xl ml-4 inline";
-    let date_h4_class = "text-white text-3xl right-0 absolute inline mr-12";
-    let ul_class = "ml-12 list-disc list-inside mb-12";
+    let title_h4_class = "text-darkAccent3 text-3xl ml-6 inline";
+    let company_h4_class = "text-white text-3xl ml-2 inline";
+    let date_h4_class = "text-white text-3xl float-right inline";
+    let ul_class = "ml-16 list-disc list-inside my-4";
     jobs.forEach((job) => {
       let title_h4 = document.createElement("h4");
       title_h4.textContent = job.title + ":";

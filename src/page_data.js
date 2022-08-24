@@ -7,7 +7,7 @@ export default {
       date: "June 2022 - August 2022",
     },
     {
-      title: "Project Manager",
+      title: "Project Lead, Member",
       company: "Dubvelopers",
       responsibilites: ["1", "2", "3"],
       date: "Jan. 2022 - June 2022",
