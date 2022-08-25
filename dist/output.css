@@ -714,6 +714,14 @@ video {
   margin-top: 0.5rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -909,6 +917,18 @@ video {
 
 .pt-64 {
   padding-top: 16rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .font-lato {
@@ -1109,5 +1129,11 @@ video {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
