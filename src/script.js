@@ -129,7 +129,8 @@ function populate_projects(projects) {
   let project_cont_class = "w-13/16 min-h-80 p-4 border-4 mb-8";
   let project_title_class = "text-darkAccent3 text-3xl w-full break-words";
   let project_body_class = "text-white text-lg md:text-xl";
-  let github_link_class = "mt-4 float-right";
+  let github_logo_class = "m-0 float-right inline";
+
   projects.forEach((project) => {
     let project_cont = document.createElement("div");
     project_cont.className = project_cont_class;
@@ -139,21 +140,22 @@ function populate_projects(projects) {
     project_title.className = project_title_class;
 
     let project_body = document.createElement("p");
-    project_body.textContent = project.body;
+    project_body.innerHTML = project.body;
     project_body.className = project_body_class;
 
     let github_link = document.createElement("a");
     github_link.href = project.githubLink;
 
     let github_logo = document.createElement("img");
-    github_logo.className = github_link_class;
+    github_logo.className = github_logo_class;
     github_logo.src = "./src/img/GitHub-Mark-Light-32px.png";
     github_logo.alt = "The Github logo";
     github_link.appendChild(github_logo);
 
+    project_cont.appendChild(github_link);
     project_cont.appendChild(project_title);
     project_cont.appendChild(project_body);
     projects_cont.appendChild(project_cont);
-    project_cont.appendChild(github_link);
+    // project_cont.appendChild(github_link);
   });
 }

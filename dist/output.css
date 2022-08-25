@@ -907,6 +907,10 @@ video {
   padding-left: 0.25rem;
 }
 
+.pt-64 {
+  padding-top: 16rem;
+}
+
 .font-lato {
   font-family: Lato, sans-serif;
 }
