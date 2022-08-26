@@ -123,6 +123,10 @@ function populate_resume_experience(jobs) {
   });
 }
 
+/**
+ *
+ * @param {JSON} projects a JSON object holding the details for all the projets to be filled
+ */
 function populate_projects(projects) {
   let projects_cont = document.getElementById("projects-cont");
 
