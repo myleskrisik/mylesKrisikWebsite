@@ -999,6 +999,11 @@ video {
   color: rgb(255 245 188 / var(--tw-text-opacity));
 }
 
+.text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(0 200 149 / var(--tw-text-opacity));
+}
+
 .hover\:border-b-accent:hover {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(0 200 149 / var(--tw-border-opacity));
@@ -1035,6 +1040,11 @@ video {
     margin-bottom: 1rem;
   }
 
+  .md\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -1065,6 +1075,10 @@ video {
 
   .md\:ml-12 {
     margin-left: 3rem;
+  }
+
+  .md\:mr-8 {
+    margin-right: 2rem;
   }
 
   .md\:block {

@@ -34,7 +34,7 @@ export default {
     },
     {
       title: "Oh Bear Cafe Website",
-      body: 'A <a class="text-accent2" href="http://ohbearcafe2018.com"> website </a> created for a UW RSO called DUBvelopers. I was a project lead on and developed this project, along with three other developers, using Vanilla HTML, CSS and Javascript. There was also a design team for this website which allowed a lot of new, learnable situations and interactions.',
+      body: 'A <a class="text-accent2" href="http://ohbearcafe2018.com"> <u>website</u> </a> created for a UW RSO called DUBvelopers. I was a project lead on and developed this project, along with three other developers, using Vanilla HTML, CSS and Javascript. There was also a design team for this website which allowed a lot of new, learnable situations and interactions.',
       githubLink: "https://github.com/DUBvelopers-UW/OhBearCafe",
     },
   ],
